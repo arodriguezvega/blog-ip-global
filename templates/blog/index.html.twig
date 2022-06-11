@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}IpGLobal - Post List{% endblock %}
+
+{% block body %}
+    <style>
+        .contenedor { margin: 1em auto; max-width: 1024px; width: 95%; font: 18px/1.5 sans-serif; }
+        .contenedor code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="contenedor">
+        <h1>Post List</h1>
+
+        <button onclick="location.href = '{{ path('create_blog') }}';">New</button>
+
+        <ul>
+            {% for post in postList %}
+                <li>
+                    <a href="{{ path('post_blog', {'id': post.id}) }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

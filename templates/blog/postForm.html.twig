@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}IpGLobal - Post Creation Form{% endblock %}
+
+{% block body %}
+    <style>
+        .contenedor { margin: 1em auto; max-width: 1024px; width: 95%; font: 18px/1.5 sans-serif; }
+        .contenedor code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="contenedor">
+        <h1>Post Creation Form</h1>
+
+        <form action="{{ path('create_post') }}" method="post">
+            <label for="title">
+                Title
+                <input type="text" name="title" required>
+            </label>
+            <br>
+            <label for="body">
+                Body
+                <textarea name="body" required></textarea>
+            </label>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+
+        <br>
+        <button onclick="location.href = '{{ path('app_blog') }}';">Back to Home</button>
+    </div>
+{% endblock %}

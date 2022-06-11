@@ -3,7 +3,7 @@ Prueba técnica sobre un blog sencillo
 
 ## Descripción
 
-Esta pequeña aplicación web muestra un listado de posts, muestra la información de cada uno de ellos y sobre el autor del post.
+Esta pequeña aplicación web muestra un listado de posts, la información de cada uno de ellos y una ficha del autor. También realiza una creación "fake" de un post. 
 
 ## Librerías
 
